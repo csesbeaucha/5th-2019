@@ -2,4 +2,5 @@
 
 #1. Mr. Beauchamp
 #2. Robert Rosas heuheueh
-#3. putting in something different
+#3. Shane LaGesse
+#4. Tanner Sharon is not very good at chess ngl
