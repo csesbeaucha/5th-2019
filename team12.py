@@ -27,6 +27,13 @@ def move(my_history, their_history, my_score, their_score):
     # Decide whether to return 'c' or 'b'.
     
     return 'c'
+    if their_score >= my_score:
+     return 'b'
+    elif: their_score != my_score:
+      return 'b'
+    else: 
+        return'c'
+         
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
