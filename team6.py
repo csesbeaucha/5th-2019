@@ -6,10 +6,11 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
+team_name = 'Team6' # Only 10 chars displayed.
 strategy_name = 'The name the team gives to this strategy'
 strategy_description = 'How does this strategy decide?'
-    
+import random
+
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
     my_score, their_score are ints.
@@ -17,7 +18,59 @@ def move(my_history, their_history, my_score, their_score):
     Make my move.
     Returns 'c' or 'b'. 
     '''
+    their_history_list = [char for char in their_history]
+    my_history_list = [char for char in my_history]
+    numtheirc = 0
+    numtheirb = 0
 
+    for l in their_history_list:
+        if their_history_list[l] == 'c':
+            numtheirc = numtheirc + 1
+        elif their_history_list[l] == 'b':
+            numtheirb = numtheirb + 1
+    
+    freqtheyc = float(numtheirc/len(their_history_list))
+
+    freqtheyb = float(numtheirb/len(their_history_list))
+    stratnumber = random.randint(0,4)
+    if stratnumber == 0:
+        if their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
+            return 'b'
+        elif their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
+            return 'c'
+        elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] != 'b':
+            return 'b'
+        elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] == 'b':
+            return 'c'
+        elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
+            return 'b'
+        elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
+            return 'c'
+        elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] != 'b':
+            return 'c'
+        elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] == 'b':
+            return 'b'
+    elif stratnumber == 1:
+        rand = random.randint(0,1)
+        if rand == 0:
+            return 'b'
+        if rand == 1:
+            return 'c'
+    elif stratnumber == 2:
+        if their_history_list[-1] == 'b':
+            return 'b'
+        elif their_history_list[-1] == 'c':
+            return 'c'
+    elif stratnumber == 3:
+        if their_history_list[-1] == 'b':
+            return 'c'
+        elif their_history_list[-1] == 'c':
+            return 'b'
+    elif stratnumber == 4:
+        if my_score <= their_score:
+            return 'b'
+        elif my_score > their_score:
+            return 'c'
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
     # The first round between these two players is my_history[0] and their_history[0].
@@ -25,8 +78,6 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
-    
-    return 'c'
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
