@@ -66,13 +66,3 @@ if __name__ == '__main__':
               my_score=0, 
               their_score=0,
               result='b')             
-
-import random            
-              
-    if len(their_history)==0:
-        elif:if random.int(1,100)?=2
-            return 'c'
-    else:
-        return 'b'
-        
-Look up for loops. 
