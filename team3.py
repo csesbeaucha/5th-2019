@@ -12,7 +12,7 @@ def move(my_history, their_history, my_score, their_score):
     
     if len(my_history) == 0:
         return 'c'
-    if len(my_history) == 1: #
+    if len(my_history) == 1: 
         return 'c'
     if len(my_history) == 2:
         return 'c'
@@ -34,7 +34,7 @@ def move(my_history, their_history, my_score, their_score):
     if len(my_history) <= 11:
         if flag == True:
             return 'c'
-        elif flag == False: #456236633
+        elif flag == False:
             return 'b'
     if flag == False:
         return 'b'
