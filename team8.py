@@ -25,8 +25,21 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
+    import random            
+              
+    if len(their_history)==0:
+        return 'c'
+    elif len(their_history)>0:
+        for i in range (len(their_history)):
     
-    return 'c'
+            if their_history[i]=='c':
+                    return 'c'
+            elif random.randint(1,10)>9:
+                return 'c'
+            else:
+                return 'b'
+    
+    
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
@@ -66,3 +79,7 @@ if __name__ == '__main__':
               my_score=0, 
               their_score=0,
               result='b')             
+
+
+
+ 
