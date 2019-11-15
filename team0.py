@@ -11,7 +11,7 @@ strategy_name = 'Maths'
 strategy_description = 'It has b as -1 and c as 1 and if positive it colludes and negative it betrays unless both peoples score is above 500 then it betrays.'
 import random 
 def move(my_history, their_history, my_score, their_score):
-    score=()
+    score=0
     if len(their_history)==0:
         first_move=['b','c']
         choice=random.choice(first_move)
