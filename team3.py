@@ -1,34 +1,89 @@
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
 team_name = 'The name the team gives to itself' # Only 10 chars displayed.
 strategy_name = 'The name the team gives to this strategy'
 strategy_description = 'How does this strategy decide?'
     
 def move(my_history, their_history, my_score, their_score):
-    ''' Arguments accepted: my_history, their_history are strings.
-    my_score, their_score are ints.
-    
-    Make my move.
-    Returns 'c' or 'b'. 
-    '''
+    flag = False   
 
-    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
-    # their_history: a string of the same length as history, possibly empty. 
-    # The first round between these two players is my_history[0] and their_history[0].
-    # The most recent round is my_history[-1] and their_history[-1].
-    
-    # Analyze my_history and their_history and/or my_score and their_score.
-    # Decide whether to return 'c' or 'b'.
-    
-    return 'c'
+flag2 = False
+
+         
+
+def move(my_history, their_history, my_score, their_score):
 
     
+
+    global flag
+
+    if len(my_history) == 0:
+
+        return 'c'
+
+    if len(my_history) == 1:
+
+        return 'c'
+
+    if len(my_history) == 2:
+
+        return 'c'
+
+    if len(my_history) == 3:
+
+        return 'b'
+
+    if len(my_history) == 4:
+
+        return 'c'
+
+    if len(their_history) == 5:
+
+        counter = 0
+
+        for i in len(their_history):
+
+            for i in len(their_history):
+
+                if my_history[i] == their_history[i]:
+
+                    counter += 1
+
+            if counter == 5:
+
+                flag = True
+
+    if len(their_history) > 5:
+
+        if their_history[-1] == 'c':
+
+           return 'b'
+
+    if len(my_history) <= 11:
+
+        if flag == True:
+
+            return 'c'
+
+        elif flag == False:
+
+            return 'b'
+
+    if flag == False:
+
+        return 'b'
+
+    if len(my_history) >= 11:
+
+        if flag == False:
+
+            return 'b'
+
+        elif flag == True:
+
+            if flag2 == True:
+
+                return 'c'
+
+
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
     from this module. Prints error if return value != result.

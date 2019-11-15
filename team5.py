@@ -5,8 +5,9 @@
 #     strategy_description: a string
 #     move: A function that returns 'c' or 'b'
 ####
-
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
+import matplotlib
+import csv
+team_name = 'T5' # Only 10 chars displayed.
 strategy_name = 'The name the team gives to this strategy'
 strategy_description = 'How does this strategy decide?'
     
@@ -28,13 +29,14 @@ def move(my_history, their_history, my_score, their_score):
     
     return 'c'
 
-    
+
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
     from this module. Prints error if return value != result.
     Returns True or False, dpending on whether result was as expected.
     '''
     real_result = move(my_history, their_history, my_score, their_score)
+    csv.writer(their_score)
     if real_result == result:
         return True
     else:
