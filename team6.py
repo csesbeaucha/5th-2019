@@ -6,7 +6,7 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'Da Best Team' # Only 10 chars displayed.
+team_name = 'reeeeeee' # Only 10 chars displayed.
 strategy_name = 'Yeet Yeet Try Me'
 strategy_description = 'You will never know...'
 import random
@@ -43,22 +43,42 @@ def move(my_history, their_history, my_score, their_score):
 
     stratnumber = random.randint(0,4)
     if stratnumber == 0:
-        if their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
+        try:
+            if their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
+                return 'b'
+            elif their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
+                return 'c'
+            elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] != 'b':
+                return 'b'
+            elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] == 'b':
+                return 'c'
+            elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
+                return 'b'
+            elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
+                return 'c'
+            elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] != 'b':
+                return 'c'
+            elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] == 'b':
+                return 'b'
+        except len(their_history_list)==0:
             return 'b'
-        elif their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
-            return 'c'
-        elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] != 'b':
-            return 'b'
-        elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] == 'b':
-            return 'c'
-        elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
-            return 'b'
-        elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
-            return 'c'
-        elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] != 'b':
-            return 'c'
-        elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] == 'b':
-            return 'b'
+        except:
+            if their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
+                return 'b'
+            elif their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
+                return 'c'
+            elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] != 'b':
+                return 'b'
+            elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] == 'b':
+                return 'c'
+            elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
+                return 'b'
+            elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
+                return 'c'
+            elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] != 'b':
+                return 'c'
+            elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] == 'b':
+                return 'b'
     elif stratnumber == 1:
         rand = random.randint(0,1)
         if rand == 0:
