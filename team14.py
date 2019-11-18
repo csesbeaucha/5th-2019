@@ -25,21 +25,20 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
-    
-    return 'c'
 
-if test_move(their_history) == 0:
-    test_move(my_history) = b
-    
-if test_move(their_score)>(my_score):
-    (my_history) = b 
 
-if test_move(their_score)<(my_score):
-    test_move = c
+    if len(their_history) == 0:
+        return 'b' 
+        
+    if their_score>my_score:
+        return 'b' 
     
-if test_move(their_score)==(my_score):
-    test_move = a 
-    
+    if their_score<my_score:
+        return 'c'
+        
+    if their_score==my_score:
+        return 'a' 
+        
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
     from this module. Prints error if return value != result.
