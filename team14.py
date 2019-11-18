@@ -28,6 +28,17 @@ def move(my_history, their_history, my_score, their_score):
     
     return 'c'
 
+if test_move(their_history) == 0:
+    test_move(my_history) = b
+    
+if test_move(their_score)>(my_score):
+    (my_history) = b 
+
+if test_move(their_score)<(my_score):
+    test_move = c
+    
+if test_move(their_score)==(my_score):
+    test_move = a 
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
@@ -55,8 +66,7 @@ if __name__ == '__main__':
               result='b'):
          print ('Test passed')
      # Test 2: Continue betraying if they collude despite being betrayed.
-    test_move(my_history='bbb',
-              their_history='ccc', 
+    test_move (my_history='bbb',their_history='ccc',
               # Note the scores are for testing move().
               # The history and scores don't need to match unless
               # that is relevant to the test of move(). Here,
@@ -64,5 +74,5 @@ if __name__ == '__main__':
               # 300 to me and -750 to them. This test will pass if and only if
               # move('bbb', 'ccc', 0, 0) returns 'b'.
               my_score=0, 
-              their_score=0,
-              result='b')             
+              their_score=0)
+              

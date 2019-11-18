@@ -33,7 +33,7 @@ def move(my_history, their_history, my_score, their_score):
                 else:
                     goodmove
         else:
-            goodmove
+            wrongmove
     else:
         if their_history[-1] == 'c':
             wrongmove
