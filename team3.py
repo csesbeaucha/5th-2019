@@ -12,7 +12,7 @@ def move(my_history, their_history, my_score, their_score):
     
     if len(my_history) == 0:
         return 'c'
-    if len(my_history) == 1: #
+    if len(my_history) == 1: 
         return 'c'
     if len(my_history) == 2:
         return 'c'
@@ -22,19 +22,18 @@ def move(my_history, their_history, my_score, their_score):
         return 'c'
     if len(their_history) == 5:
         counter = 0
-        for i in len(their_history):
-            for i in len(their_history):
-                if my_history[i] == their_history[i]:
-                    counter += 1
-            if counter == 5:
-                flag = True
+        for i in range(5):
+            if my_history[i] == their_history[i]:
+                counter += 1
+                if counter == 5:
+                    flag = True
     if len(their_history) > 5:
         if their_history[-1] == 'c':
            return 'b' 
     if len(my_history) <= 11:
         if flag == True:
             return 'c'
-        elif flag == False: #456236633
+        elif flag == False:
             return 'b'
     if flag == False:
         return 'b'

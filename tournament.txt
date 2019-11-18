@@ -1,6 +1,7 @@
 --------------------------------------------------------------------------------
 Section 0 - Line up
 --------------------------------------------------------------------------------
+<<<<<<< HEAD
 Player 0 (P0): E0, Collude
         Always collude.
 Player 1 (P1): E1, Betray
@@ -10,82 +11,75 @@ Player 2 (P2): E2, Alternate
 Player 3 (P3): E3, Collude but retaliate
         Collude first round. Collude, except in a round after getting 
         a severe punishment.
+=======
+Player 0 (P0): GoldenBals, Maths
+        It has b as -1 and c as 1 and if positive it colludes and negative it be
+        trays unless both peoples score is above 500 then it betrays.
+Player 1 (P1): ShadowClan, The name the team gives to this strategy
+        How does this strategy decide?
+Player 2 (P2): Good Game, Operation Massacre
+        There are certain conditions where I may collude. There are also certain
+         conditions where I may betray. The only thing that I know for sure is t
+        hat me=win
+Player 3 (P3): The name the team gives to itself, The name the team gives to this strategy
+        How does this strategy decide?
+Player 4 (P4): , Betray when possible
+        if opponent tends to collaborate, we shall betray them.
+Player 5 (P5): phumph, Last player's move
+        It picks the choice that the opposite player chose in the previous round
+Player 6 (P6): 1080Tis, B for a B
+        Tit for Tat
+Player 7 (P7): The name the team gives to itself, The name the team gives to this strategy
+        How does this strategy decide?
+>>>>>>> c1de37c62e09536f96f85e6500ab98513204f62f
 --------------------------------------------------------------------------------
 Section 1 - Player vs. Player
 --------------------------------------------------------------------------------
 Each column shows pts/round earned against each other player:
+<<<<<<< HEAD
              P0     P1     P2     P3
-vs. P0 :    0.0  100.0   75.0   50.0
-vs. P1 : -500.0    0.0 -376.0 -376.0
-vs. P2 : -225.0  -74.0    0.0 -199.0
-vs. P3 :   50.0  -75.0 -199.0    0.0
-TOTAL  : -675.0  -49.0 -500.0 -525.0
+vs. P0 :    0.0  100.0   74.0   50.0
+vs. P1 : -500.0    0.0 -376.0 -377.0
+vs. P2 : -223.0  -74.0    0.0 -199.0
+vs. P3 :   50.0  -74.0 -199.0    0.0
+TOTAL  : -673.0  -48.0 -501.0 -526.0
+=======
+             P0     P1     P2     P3     P4     P5     P6     P7
+vs. P0 :      0     47   -265   -250   -250     51   -250   -250
+vs. P1 :     50      0     50     50    100     60   -250     50
+vs. P2 :   -228     50      0   -241   -225     73   -250   -234
+vs. P3 :   -250     47   -241      0   -250   -224   -250   -250
+vs. P4 :   -250   -500   -268   -250      0   -251   -250   -250
+vs. P5 :     34    -62   -204   -224   -248      0   -250   -224
+vs. P6 :   -250   -250   -250   -250   -250   -250      0   -250
+vs. P7 :   -250     45   -234   -250   -250   -224   -250      0
+TOTAL  :-1143.73-623.16-1411.55-1414.12-1372.61-764.11-1750.0-1407.51
+>>>>>>> c1de37c62e09536f96f85e6500ab98513204f62f
 --------------------------------------------------------------------------------
 Section 2 - Leaderboard
 --------------------------------------------------------------------------------
 Average points per round:
 Team name (P#):  Score      with strategy name
-E2        (P2):     -125.0 points with Alternate                               
-E1        (P1):      -13.0 points with Betray                                  
+<<<<<<< HEAD
+E1        (P1):      -12.0 points with Betray                                  
+E2        (P2):     -126.0 points with Alternate                               
 E3        (P3):     -132.0 points with Collude but retaliate                   
 E0        (P0):     -169.0 points with Collude                                 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 example0--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E0'
-strategy_name = 'Collude'
-strategy_description = 'Always collude.'
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    
-    # This player always colludes.
-    return 'c'
-    --------------------------------------------------------------------------------
-example1--------------------------------------------------------------------------------
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
-
-team_name = 'E1'
-strategy_name = 'Betray'
-strategy_description = 'Always betray.'
-    
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    
-    #This example player always betrays.      
-    return 'b'
+=======
+GoldenBals(P0):    -142.97 points with Maths                                   
+          (P4):    -171.58 points with Betray when possible                    
+The name t(P7):    -175.94 points with The name the team gives to this strategy
+Good Game (P2):    -176.44 points with Operation Massacre                      
+The name t(P3):    -176.76 points with The name the team gives to this strategy
+1080Tis   (P6):    -218.75 points with B for a B                               
+ShadowClan(P1):     -77.89 points with The name the team gives to this strategy
+phumph    (P5):     -95.51 points with Last player's move                      
 --------------------------------------------------------------------------------
-example2--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+team0--------------------------------------------------------------------------------
 ####
 # Each team's file must define four tokens:
 #     team_name: a string
@@ -94,27 +88,76 @@ example2------------------------------------------------------------------------
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'E2'
-strategy_name = 'Alternate'
-strategy_description = 'Collude, then alternate.'
-    
+team_name = 'GoldenBals' # Only 10 chars displayed.
+strategy_name = 'Maths'
+strategy_description = 'It has b as -1 and c as 1 and if positive it colludes and negative it betrays unless both peoples score is above 500 then it betrays.'
+import random 
 def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
-    
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
-    
-    Returns 'c' or 'b' for collude or betray.
-    '''
-    # This player colludes on even numbered rounds (first round is round #0).
-    if len(my_history)%2 == 0:
-        return 'c'
+    score=0
+    if len(their_history)==0:
+        first_move=['b','c']
+        choice=random.choice(first_move)
+        return choice  
     else:
+        for item in their_history:
+            if item=='b':
+                score+=-1
+            else:
+                score+=1
+    if score>0:
+        return 'c'
+    elif score<0:
         return 'b'
-    --------------------------------------------------------------------------------
-example3--------------------------------------------------------------------------------
+    elif their_score>500:
+        return "b"
+    
+    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history: a string of the same length as history, possibly empty. 
+    # The first round between these two players is my_history[0] and their_history[0].
+    # The most recent round is my_history[-1] and their_history[-1].
+    
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Decide whether to return 'c' or 'b'.
+    
+'''def test_move(my_history, their_history, my_score, their_score, result):
+    calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')'''             --------------------------------------------------------------------------------
+team7--------------------------------------------------------------------------------
+>>>>>>> c1de37c62e09536f96f85e6500ab98513204f62f
 ####
 # Each team's file must define four tokens:
 #     team_name: a string
@@ -123,20 +166,440 @@ example3------------------------------------------------------------------------
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'E3'
-strategy_name = 'Collude but retaliate'
-strategy_description = '''\
-Collude first round. Collude, except in a round after getting 
-a severe punishment.'''
+team_name = 'ShadowClan' # Only 10 chars displayed.
+strategy_name = 'The name the team gives to this strategy'
+strategy_description = 'How does this strategy decide?'
     
 def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.
     
-    history: a string with one letter (c or b) per round that has been played with this opponent.
-    their_history: a string of the same length as history, possibly empty. 
-    The first round between these two players is my_history[0] and their_history[0]
-    The most recent round is my_history[-1] and their_history[-1]
+    Make my move.
+    Returns 'c' or 'b'. 
+    '''
+
+    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history: a string of the same length as history, possibly empty. 
+    # The first round between these two players is my_history[0] and their_history[0].
+    # The most recent round is my_history[-1] and their_history[-1].
     
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Decide whether to return 'c' or 'b'.
+    
+    return 'c'
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b') 
+              
+def dilemma_strat(their_score,their_history):
+    if their_score>=0:
+        if their_history[-1]=='b':
+            return 'b'
+    else:
+        if their_history[-1]=='c':
+            return 'b'
+    
+                  --------------------------------------------------------------------------------
+team8--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'Good Game' # Only 10 chars displayed.
+strategy_name = 'Operation Massacre'
+strategy_description = 'There are certain conditions where I may collude. There are also certain conditions where I may betray. The only thing that I know for sure is that me=win'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.
+    
+    Make my move.
+    Returns 'c' or 'b'. 
+    '''
+
+    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history: a string of the same length as history, possibly empty. 
+    # The first round between these two players is my_history[0] and their_history[0].
+    # The most recent round is my_history[-1] and their_history[-1].
+    
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Decide whether to return 'c' or 'b'.
+    import random            
+              
+    if len(their_history)==0:
+        return 'c'
+    elif len(their_history)>0:
+        for i in range (len(their_history)):
+    
+            if their_history[i]=='c':
+                    return 'c'
+            elif random.randint(1,10)>9:
+                return 'c'
+            else:
+                return 'b'
+    
+    
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             
+
+
+
+ 
+--------------------------------------------------------------------------------
+team12--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'The name the team gives to itself' # Only 10 chars displayed.
+strategy_name = 'The name the team gives to this strategy'
+strategy_description = 'How does this strategy decide?'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.
+    
+    Make my move.
+    Returns 'c' or 'b'. 
+    '''
+
+    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history: a string of the same length as history, possibly empty. 
+    # The first round between these two players is my_history[0] and their_history[0].
+    # The most recent round is my_history[-1] and their_history[-1].
+    
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Decide whether to return 'c' or 'b'.
+    
+    
+    if their_score >= my_score:
+        return 'b'
+    else: 
+        return'c'
+            
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             
+              --------------------------------------------------------------------------------
+team9--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = '' # Only 10 chars displayed.
+strategy_name = 'Betray when possible'
+strategy_description = 'if opponent tends to collaborate, we shall betray them.'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.
+    
+    Make my move.
+    Returns 'c' or 'b'. 
+    '''
+
+    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history: a string of the same length as history, possibly empty. 
+    # The first round between these two players is my_history[0] and their_history[0].
+    # The most recent round is my_history[-1] and their_history[-1].
+    
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Decide whether to return 'c' or 'b'.
+    count = 0
+    if len(their_history) == 0:
+        return 'b'
+    else:    
+        for item in their_history:
+            if item == 'c':
+                count = count + 1
+            else:
+                count = count 
+        if count >= len(their_history)*0.75 or count <= len(their_history)*0.5:
+            return 'b'
+        else:
+            return 'c'
+        
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             --------------------------------------------------------------------------------
+team10--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'phumph' # Only 10 chars displayed.
+strategy_name = "Last player's move"
+strategy_description = 'It picks the choice that the opposite player chose in the previous round'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.
+    
+    Make my move.
+    Returns 'c' or 'b'. 
+    '''
+    if len(their_history)==0:
+        return 'c'
+    elif len(their_history)>=98:
+        return 'b'
+    else:
+    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history: a string of the same length as history, possibly empty. 
+    # The first round between these two players is my_history[0] and their_history[0].
+    # The most recent round is my_history[-1] and their_history[-1].
+    
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Decide whether to return 'c' or 'b'.
+    
+        return their_history[-1]
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             --------------------------------------------------------------------------------
+team4--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = '1080Tis'
+strategy_name = 'B for a B'
+strategy_description = 'Tit for Tat'
+    
+def wrongmove():
+    return 'c'
+    
+def goodmove():
+    return 'b'
+friend = False
+final = False
+def move(my_history, their_history, my_score, their_score):
+    if len(my_history) == 0 or len(my_history) == 1 or len(my_history) == 2 or len(my_history) == 4:
+        wrongmove
+    elif len(my_history) == 3:
+        goodmove
+    elif their_history[0] == 'c' and their_history[1] == 'c' and their_history[2] == 'c' and their_history[3] == 'b' and their_history[4] == 'c':
+        if len(my_history) > 14:
+            for n in range(len(10)):
+                if their_history[n+4] == 'b':
+                    if their_history[-1] == 'c':
+                        wrongmove
+                    else: 
+                        goodmove
+                else:
+                    goodmove
+        else:
+            goodmove
+    else:
+        if their_history[-1] == 'c':
+            wrongmove
+        else:
+            goodmove
+            
+            
+    
+    
+    
+<<<<<<< HEAD
     Returns 'c' or 'b' for collude or betray.
     '''
     if len(my_history)==0: # It's the first round; collude.
@@ -155,34 +618,338 @@ BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
-ccccccccccccccccccccc
-BBBBBBBBBBBBBBBBBBBBB
+ccccccccccccccc
+BBBBBBBBBBBBBBB
 
 --------------------------------------------------------------------------------
--225 pt/round: E0(P0) "Collude"
-75 pt/round: E2(P2) "Alternate"
+-223 pt/round: E0(P0) "Collude"
+74 pt/round: E2(P2) "Alternate"
 CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
 CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
 
-CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
-CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
-
-CcCcCcCcCc
-CBCBCBCBCB
+CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcC
+CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
 
 --------------------------------------------------------------------------------
 50 pt/round: E0(P0) "Collude"
 50 pt/round: E3(P3) "Collude but retaliate"
+=======
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.
+    
+    Make my move.
+    Returns 'c' or 'b'. 
+    '''   --------------------------------------------------------------------------------
+team12--------------------------------------------------------------------------------
+####
+# Each team's file must define four tokens:
+#     team_name: a string
+#     strategy_name: a string
+#     strategy_description: a string
+#     move: A function that returns 'c' or 'b'
+####
+
+team_name = 'The name the team gives to itself' # Only 10 chars displayed.
+strategy_name = 'The name the team gives to this strategy'
+strategy_description = 'How does this strategy decide?'
+    
+def move(my_history, their_history, my_score, their_score):
+    ''' Arguments accepted: my_history, their_history are strings.
+    my_score, their_score are ints.
+    
+    Make my move.
+    Returns 'c' or 'b'. 
+    '''
+
+    # my_history: a string with one letter (c or b) per round that has been played with this opponent.
+    # their_history: a string of the same length as history, possibly empty. 
+    # The first round between these two players is my_history[0] and their_history[0].
+    # The most recent round is my_history[-1] and their_history[-1].
+    
+    # Analyze my_history and their_history and/or my_score and their_score.
+    # Decide whether to return 'c' or 'b'.
+    
+    
+    if their_score >= my_score:
+        return 'b'
+    else: 
+        return'c'
+            
+
+    
+def test_move(my_history, their_history, my_score, their_score, result):
+    '''calls move(my_history, their_history, my_score, their_score)
+    from this module. Prints error if return value != result.
+    Returns True or False, dpending on whether result was as expected.
+    '''
+    real_result = move(my_history, their_history, my_score, their_score)
+    if real_result == result:
+        return True
+    else:
+        print("move(" +
+            ", ".join(["'"+my_history+"'", "'"+their_history+"'",
+                       str(my_score), str(their_score)])+
+            ") returned " + "'" + real_result + "'" +
+            " and should have returned '" + result + "'")
+        return False
+
+if __name__ == '__main__':
+     
+    # Test 1: Betray on first move.
+    if test_move(my_history='',
+              their_history='', 
+              my_score=0,
+              their_score=0,
+              result='b'):
+         print ('Test passed')
+     # Test 2: Continue betraying if they collude despite being betrayed.
+    test_move(my_history='bbb',
+              their_history='ccc', 
+              # Note the scores are for testing move().
+              # The history and scores don't need to match unless
+              # that is relevant to the test of move(). Here,
+              # the simulation (if working correctly) would have awarded 
+              # 300 to me and -750 to them. This test will pass if and only if
+              # move('bbb', 'ccc', 0, 0) returns 'b'.
+              my_score=0, 
+              their_score=0,
+              result='b')             
+              --------------------------------------------------------------------------------
+Section 3 - Game Data for Team GoldenBals
+--------------------------------------------------------------------------------
+50.303030303030305 pt/round: GoldenBals(P0) "Maths"
+46.666666666666664 pt/round: ShadowClan(P1) "The name the team gives to this strategy"
+BCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+cCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCC
+CCCCC
+
+--------------------------------------------------------------------------------
+-227.69230769230768 pt/round: GoldenBals(P0) "Maths"
+-264.61538461538464 pt/round: Good Game(P2) "Operation Massacre"
+Bc bbbbbBbbbbbbbbbbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbBbbbBbbbbbbbbbbbbbbbbBbbbbb
+cBbbbbbbcbbbbbbbbbbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcbbbcbbbbbbbbbbbbbbbbcbbbbb
+
+bbbbbbbbbbbbbbbbbBbbbBbbbbbbbbbbbBbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbcbbbcbbbbbbbbbbbcbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: GoldenBals(P0) "Maths"
+-250.0 pt/round: The name the team gives to itself(P3) "The name the team gives to this strategy"
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: GoldenBals(P0) "Maths"
+-250.0 pt/round: (P4) "Betray when possible"
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+33.663366336633665 pt/round: GoldenBals(P0) "Maths"
+51.48514851485149 pt/round: phumph(P5) "Last player's move"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCccc
+CCCCCCCCCCCCCCCCCCBBB
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: GoldenBals(P0) "Maths"
+-250.0 pt/round: 1080Tis(P6) "B for a B"
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+                                                                                
+
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+                                                                           
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: GoldenBals(P0) "Maths"
+-250.0 pt/round: The name the team gives to itself(P7) "The name the team gives to this strategy"
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Section 3 - Game Data for Team E1
+Section 3 - Game Data for Team ShadowClan
 --------------------------------------------------------------------------------
+46.666666666666664 pt/round: ShadowClan(P1) "The name the team gives to this strategy"
+50.303030303030305 pt/round: GoldenBals(P0) "Maths"
+cCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+BCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCC
+CCCCC
+
+--------------------------------------------------------------------------------
+50.0 pt/round: ShadowClan(P1) "The name the team gives to this strategy"
+50.0 pt/round: Good Game(P2) "Operation Massacre"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+46.666666666666664 pt/round: ShadowClan(P1) "The name the team gives to this strategy"
+50.303030303030305 pt/round: The name the team gives to itself(P3) "The name the team gives to this strategy"
+cCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+BCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCC
+CCCCC
+
+--------------------------------------------------------------------------------
+-500.0 pt/round: ShadowClan(P1) "The name the team gives to this strategy"
+100.0 pt/round: (P4) "Betray when possible"
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+
+cccccccccccccccccccccccccccccc
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+
+--------------------------------------------------------------------------------
+-61.78861788617886 pt/round: ShadowClan(P1) "The name the team gives to this strategy"
+60.16260162601626 pt/round: phumph(P5) "Last player's move"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCccccccccccccccccccccccccc
+CCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBB
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: ShadowClan(P1) "The name the team gives to this strategy"
+-250.0 pt/round: 1080Tis(P6) "B for a B"
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+                                                                                
+
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+                                                                                
+
+cccc
+    
+
+--------------------------------------------------------------------------------
+45.2991452991453 pt/round: ShadowClan(P1) "The name the team gives to this strategy"
+50.427350427350426 pt/round: The name the team gives to itself(P7) "The name the team gives to this strategy"
+cCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+BCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team Good Game
+--------------------------------------------------------------------------------
+-264.61538461538464 pt/round: Good Game(P2) "Operation Massacre"
+-227.69230769230768 pt/round: GoldenBals(P0) "Maths"
+cBbbbbbbcbbbbbbbbbbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcbbbcbbbbbbbbbbbbbbbbcbbbbb
+Bc bbbbbBbbbbbbbbbbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbBbbbBbbbbbbbbbbbbbbbbBbbbbb
+
+bbbbbbbbbbbbbbbbbcbbbcbbbbbbbbbbbcbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbBbbbBbbbbbbbbbbbBbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+50.0 pt/round: Good Game(P2) "Operation Massacre"
+50.0 pt/round: ShadowClan(P1) "The name the team gives to this strategy"
+>>>>>>> c1de37c62e09536f96f85e6500ab98513204f62f
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+<<<<<<< HEAD
+CCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCC
+=======
+CCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+-240.9090909090909 pt/round: Good Game(P2) "Operation Massacre"
+-240.9090909090909 pt/round: The name the team gives to itself(P3) "The name the team gives to this strategy"
+cBbbbbbbcCBbbbbbbbbbbbbbcBbbbbbbbbbbbbbbbbbbbbbbbbbbcBbbbbbbbbbbbbbbbbbbbbbbbbbb
+BcbbbbbbBCcbbbbbbbbbbbbbBcbbbbbbbbbbbbbbbbbbbbbbbbbbBcbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcBbbbbbcCB
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbBcbbbbbBCc
+
+--------------------------------------------------------------------------------
+-268.1818181818182 pt/round: Good Game(P2) "Operation Massacre"
+-224.54545454545453 pt/round: (P4) "Betray when possible"
+cbbbbbbbbcbbbbbbbbbbbbbbbbbbbbbbbcbbbbbbcbbbbbbbbbbbbcbbbbbbbbbbbbbbbbbbbcbcbbbb
+BbbbbbbbbBbbbbbbbbbbbbbbbbbbbbbbbBbbbbbbBbbbbbbbbbbbbBbbbbbbbbbbbbbbbbbbbBbBbbbb
+
+bbbbbbcbbbbbbbbbbbbbbccbbbbbbbbbbbcbbbbbbbbbbbbbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbBbbbbbbbbbbbbbbBBbbbbbbbbbbbBbbbbbbbbbbbbbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbb
+bbbbb
+
+--------------------------------------------------------------------------------
+-203.84615384615384 pt/round: Good Game(P2) "Operation Massacre"
+73.07692307692308 pt/round: phumph(P5) "Last player's move"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+CCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+
+cccccccccccccccccccccc
+BBBBBBBBBBBBBBBBBBBBBB
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: Good Game(P2) "Operation Massacre"
+-250.0 pt/round: 1080Tis(P6) "B for a B"
+cbbbbbbbcbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcbcbbbbbbbbbbbbbbcbbcbbcbbbbbbbbbbbcbb
+                                                                                
+
+bbbbbcbbbcbbbbbcbbbbbbbbcbbbbbcbbbbbbbbbbbcbbbbbbbbbbbbbbbcbbbbbbbbbcbbbbbbbbb
+                                                                              
+>>>>>>> c1de37c62e09536f96f85e6500ab98513204f62f
+
+--------------------------------------------------------------------------------
+-234.0 pt/round: Good Game(P2) "Operation Massacre"
+-234.0 pt/round: The name the team gives to itself(P7) "The name the team gives to this strategy"
+cBbbbbbbbbbbbbbbbbbbcCBbbbbcBcBbbbbbbcBbbbbbbbbcBbbcBbbbbcBbcBbcBbbbbbbbbbcBbbbb
+BcbbbbbbbbbbbbbbbbbbBCcbbbbBcBcbbbbbbBcbbbbbbbbBcbbBcbbbbBcbBcbBcbbbbbbbbbBcbbbb
+
+bbbcBbbbbbbbcBbbbbbb
+bbbBcbbbbbbbBcbbbbbb
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+<<<<<<< HEAD
 100 pt/round: E1(P1) "Betray"
 -500 pt/round: E0(P0) "Collude"
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
@@ -191,8 +958,8 @@ cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
-BBBBBBBBBBBBBBBBBBBBB
-ccccccccccccccccccccc
+BBBBBBBBBBBBBBB
+ccccccccccccccc
 
 --------------------------------------------------------------------------------
 -74 pt/round: E1(P1) "Betray"
@@ -200,35 +967,127 @@ ccccccccccccccccccccc
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
 
 --------------------------------------------------------------------------------
--75 pt/round: E1(P1) "Betray"
--376 pt/round: E3(P3) "Collude but retaliate"
+-74 pt/round: E1(P1) "Betray"
+-377 pt/round: E3(P3) "Collude but retaliate"
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+=======
+Section 3 - Game Data for Team The name the team gives to itself
+--------------------------------------------------------------------------------
+-250.0 pt/round: The name the team gives to itself(P3) "The name the team gives to this strategy"
+-250.0 pt/round: GoldenBals(P0) "Maths"
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
-BbBbBbBbBbBbBbBbBbBbB
-cbcbcbcbcbcbcbcbcbcbc
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+50.303030303030305 pt/round: The name the team gives to itself(P3) "The name the team gives to this strategy"
+46.666666666666664 pt/round: ShadowClan(P1) "The name the team gives to this strategy"
+BCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+cCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCC
+CCCCC
+
+--------------------------------------------------------------------------------
+-240.9090909090909 pt/round: The name the team gives to itself(P3) "The name the team gives to this strategy"
+-240.9090909090909 pt/round: Good Game(P2) "Operation Massacre"
+BcbbbbbbBCcbbbbbbbbbbbbbBcbbbbbbbbbbbbbbbbbbbbbbbbbbBcbbbbbbbbbbbbbbbbbbbbbbbbbb
+cBbbbbbbcCBbbbbbbbbbbbbbcBbbbbbbbbbbbbbbbbbbbbbbbbbbcBbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbBcbbbbbBCc
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcBbbbbbcCB
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: The name the team gives to itself(P3) "The name the team gives to this strategy"
+-250.0 pt/round: (P4) "Betray when possible"
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-223.51351351351352 pt/round: The name the team gives to itself(P3) "The name the team gives to this strategy"
+-223.51351351351352 pt/round: phumph(P5) "Last player's move"
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+
+BcBcBcBcBcBcBcBcBcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cBcBcBcBcBcBcBcBcBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: The name the team gives to itself(P3) "The name the team gives to this strategy"
+-250.0 pt/round: 1080Tis(P6) "B for a B"
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                                                                                
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                                                                                
+
+bbbbbbbbbbbbbbbbbbbbbbb
+                       
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: The name the team gives to itself(P3) "The name the team gives to this strategy"
+-250.0 pt/round: The name the team gives to itself(P7) "The name the team gives to this strategy"
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
+Section 3 - Game Data for Team 
+--------------------------------------------------------------------------------
+-250.0 pt/round: (P4) "Betray when possible"
+-250.0 pt/round: GoldenBals(P0) "Maths"
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbb
+>>>>>>> c1de37c62e09536f96f85e6500ab98513204f62f
+
+--------------------------------------------------------------------------------
+100.0 pt/round: (P4) "Betray when possible"
+-500.0 pt/round: ShadowClan(P1) "The name the team gives to this strategy"
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+cccccccccccccccccccccccccccccc
+
+--------------------------------------------------------------------------------
+<<<<<<< HEAD
 Section 3 - Game Data for Team E2
 --------------------------------------------------------------------------------
-75 pt/round: E2(P2) "Alternate"
--225 pt/round: E0(P0) "Collude"
+74 pt/round: E2(P2) "Alternate"
+-223 pt/round: E0(P0) "Collude"
 CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
 CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
 
-CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCB
-CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCc
-
-CBCBCBCBCB
-CcCcCcCcCc
+CBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBCBC
+CcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcCcC
 
 --------------------------------------------------------------------------------
 -376 pt/round: E2(P2) "Alternate"
@@ -236,8 +1095,8 @@ CcCcCcCcCc
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
 
 --------------------------------------------------------------------------------
 -199 pt/round: E2(P2) "Alternate"
@@ -245,35 +1104,107 @@ BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
 CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 
-cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
-BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+=======
+-224.54545454545453 pt/round: (P4) "Betray when possible"
+-268.1818181818182 pt/round: Good Game(P2) "Operation Massacre"
+BbbbbbbbbBbbbbbbbbbbbbbbbbbbbbbbbBbbbbbbBbbbbbbbbbbbbBbbbbbbbbbbbbbbbbbbbBbBbbbb
+cbbbbbbbbcbbbbbbbbbbbbbbbbbbbbbbbcbbbbbbcbbbbbbbbbbbbcbbbbbbbbbbbbbbbbbbbcbcbbbb
 
-cBcBcBc
-BcBcBcB
+bbbbbbBbbbbbbbbbbbbbbBBbbbbbbbbbbbBbbbbbbbbbbbbbBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbcbbbbbbbbbbbbbbccbbbbbbbbbbbcbbbbbbbbbbbbbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbb
+bbbbb
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: (P4) "Betray when possible"
+-250.0 pt/round: The name the team gives to itself(P3) "The name the team gives to this strategy"
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-248.06629834254144 pt/round: (P4) "Betray when possible"
+-251.38121546961327 pt/round: phumph(P5) "Last player's move"
+Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: (P4) "Betray when possible"
+-250.0 pt/round: 1080Tis(P6) "B for a B"
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                                                                                
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                                           
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: (P4) "Betray when possible"
+-250.0 pt/round: The name the team gives to itself(P7) "The name the team gives to this strategy"
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+>>>>>>> c1de37c62e09536f96f85e6500ab98513204f62f
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-Section 3 - Game Data for Team E3
+Section 3 - Game Data for Team phumph
 --------------------------------------------------------------------------------
+<<<<<<< HEAD
 50 pt/round: E3(P3) "Collude but retaliate"
 50 pt/round: E0(P0) "Collude"
+=======
+51.48514851485149 pt/round: phumph(P5) "Last player's move"
+33.663366336633665 pt/round: GoldenBals(P0) "Maths"
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCBBB
+CCCCCCCCCCCCCCCCCCccc
 
 --------------------------------------------------------------------------------
--376 pt/round: E3(P3) "Collude but retaliate"
--75 pt/round: E1(P1) "Betray"
+60.16260162601626 pt/round: phumph(P5) "Last player's move"
+-61.78861788617886 pt/round: ShadowClan(P1) "The name the team gives to this strategy"
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBB
+CCCCCCCCCCCCCCCCCCccccccccccccccccccccccccc
+
+--------------------------------------------------------------------------------
+73.07692307692308 pt/round: phumph(P5) "Last player's move"
+-203.84615384615384 pt/round: Good Game(P2) "Operation Massacre"
+>>>>>>> c1de37c62e09536f96f85e6500ab98513204f62f
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+CCCCCCCCCCCCCCCCCCcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+
+<<<<<<< HEAD
+CCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+-377 pt/round: E3(P3) "Collude but retaliate"
+-74 pt/round: E1(P1) "Betray"
 cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
 BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
 
-cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcb
-BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBb
-
-cbcbcbcbcbcbcbcbcbcbc
-BbBbBbBbBbBbBbBbBbBbB
+cbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbcbc
+BbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbBbB
 
 --------------------------------------------------------------------------------
 -199 pt/round: E3(P3) "Collude but retaliate"
@@ -281,10 +1212,200 @@ BbBbBbBbBbBbBbBbBbBbB
 CcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 CBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+=======
+BBBBBBBBBBBBBBBBBBBBBB
+cccccccccccccccccccccc
+
+--------------------------------------------------------------------------------
+-223.51351351351352 pt/round: phumph(P5) "Last player's move"
+-223.51351351351352 pt/round: The name the team gives to itself(P3) "The name the team gives to this strategy"
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+
+cBcBcBcBcBcBcBcBcBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+BcBcBcBcBcBcBcBcBcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-251.38121546961327 pt/round: phumph(P5) "Last player's move"
+-248.06629834254144 pt/round: (P4) "Betray when possible"
+cbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+Bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: phumph(P5) "Last player's move"
+-250.0 pt/round: 1080Tis(P6) "B for a B"
+c                                                                               
+                                                                                
+
+                  bbbbbbbbb
+                           
+
+--------------------------------------------------------------------------------
+-223.93617021276594 pt/round: phumph(P5) "Last player's move"
+-223.93617021276594 pt/round: The name the team gives to itself(P7) "The name the team gives to this strategy"
+cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
+BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
+
+cBcBcBcBcBcBcBcBcBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+BcBcBcBcBcBcBcBcBcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team 1080Tis
+--------------------------------------------------------------------------------
+-250.0 pt/round: 1080Tis(P6) "B for a B"
+-250.0 pt/round: GoldenBals(P0) "Maths"
+                                                                                
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+
+                                                                           
+ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: 1080Tis(P6) "B for a B"
+-250.0 pt/round: ShadowClan(P1) "The name the team gives to this strategy"
+                                                                                
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+
+                                                                                
+cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+
+    
+cccc
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: 1080Tis(P6) "B for a B"
+-250.0 pt/round: Good Game(P2) "Operation Massacre"
+                                                                                
+cbbbbbbbcbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcbcbbbbbbbbbbbbbbcbbcbbcbbbbbbbbbbbcbb
+
+                                                                              
+bbbbbcbbbcbbbbbcbbbbbbbbcbbbbbcbbbbbbbbbbbcbbbbbbbbbbbbbbbcbbbbbbbbbcbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: 1080Tis(P6) "B for a B"
+-250.0 pt/round: The name the team gives to itself(P3) "The name the team gives to this strategy"
+                                                                                
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+                                                                                
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+                       
+bbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: 1080Tis(P6) "B for a B"
+-250.0 pt/round: (P4) "Betray when possible"
+                                                                                
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+                                           
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: 1080Tis(P6) "B for a B"
+-250.0 pt/round: phumph(P5) "Last player's move"
+                                                                                
+c                                                                               
+
+                           
+                  bbbbbbbbb
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: 1080Tis(P6) "B for a B"
+-250.0 pt/round: The name the team gives to itself(P7) "The name the team gives to this strategy"
+                                                                                
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+                                                  
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Section 3 - Game Data for Team The name the team gives to itself
+--------------------------------------------------------------------------------
+-250.0 pt/round: The name the team gives to itself(P7) "The name the team gives to this strategy"
+-250.0 pt/round: GoldenBals(P0) "Maths"
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+50.427350427350426 pt/round: The name the team gives to itself(P7) "The name the team gives to this strategy"
+45.2991452991453 pt/round: ShadowClan(P1) "The name the team gives to this strategy"
+BCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+cCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+--------------------------------------------------------------------------------
+-234.0 pt/round: The name the team gives to itself(P7) "The name the team gives to this strategy"
+-234.0 pt/round: Good Game(P2) "Operation Massacre"
+BcbbbbbbbbbbbbbbbbbbBCcbbbbBcBcbbbbbbBcbbbbbbbbBcbbBcbbbbBcbBcbBcbbbbbbbbbBcbbbb
+cBbbbbbbbbbbbbbbbbbbcCBbbbbcBcBbbbbbbcBbbbbbbbbcBbbcBbbbbcBbcBbcBbbbbbbbbbcBbbbb
+
+bbbBcbbbbbbbBcbbbbbb
+bbbcBbbbbbbbcBbbbbbb
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: The name the team gives to itself(P7) "The name the team gives to this strategy"
+-250.0 pt/round: The name the team gives to itself(P3) "The name the team gives to this strategy"
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: The name the team gives to itself(P7) "The name the team gives to this strategy"
+-250.0 pt/round: (P4) "Betray when possible"
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-223.93617021276594 pt/round: The name the team gives to itself(P7) "The name the team gives to this strategy"
+-223.93617021276594 pt/round: phumph(P5) "Last player's move"
 BcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBc
 cBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcBcB
 
-BcBcBcB
-cBcBcBc
+BcBcBcBcBcBcBcBcBcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+cBcBcBcBcBcBcBcBcBbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbb
+bbbbbbbbbbbbbbbbbbbbbbbbbbbb
+
+--------------------------------------------------------------------------------
+-250.0 pt/round: The name the team gives to itself(P7) "The name the team gives to this strategy"
+-250.0 pt/round: 1080Tis(P6) "B for a B"
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                                                                                
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                                                  
+>>>>>>> c1de37c62e09536f96f85e6500ab98513204f62f
 
 --------------------------------------------------------------------------------
