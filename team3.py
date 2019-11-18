@@ -1,4 +1,4 @@
-team_name = 'yoink'
+team_name = 'isbetterthan'
 strategy_name = 'hive mind'
 strategy_description = 'it decides whether you are friend or foe. If you are foe, you will be decimated. If you are friend, you will be elevated.'
     
