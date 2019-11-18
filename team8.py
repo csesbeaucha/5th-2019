@@ -34,7 +34,7 @@ def move(my_history, their_history, my_score, their_score):
     
             if their_history[i]=='b':
                     return 'b'
-            elif random.randint(1,100)>95:
+            elif random.randint(1,100)>98:
                 return 'c'
             else:
                 return 'b'

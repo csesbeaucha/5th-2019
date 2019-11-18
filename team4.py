@@ -15,17 +15,7 @@ def move(my_history, their_history, my_score, their_score):
     elif len(my_history) == 3:
         goodmove()
     elif their_history[0] == 'c' and their_history[1] == 'c' and their_history[2] == 'c' and their_history[3] == 'b' and their_history[4] == 'c':
-        if len(my_history) > 14:
-            for n in range(10):
-                if their_history[n+4] == 'b':
-                    if their_history[-1] == 'c':
-                        wrongmove()
-                    else: 
-                        goodmove()
-                else:
-                    goodmove()
-        else:
-            goodmove()
+        goodmove()
     else:
         if their_history[-1] == 'c':
             wrongmove()
