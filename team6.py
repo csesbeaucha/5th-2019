@@ -32,10 +32,10 @@ def move(my_history, their_history, my_score, their_score):
         freqtheyc = float(numtheirc/len(their_history_list))
 
         freqtheyb = float(numtheirb/len(their_history_list))
-    except ZeroDivisionError as error:
+    except ZeroDivisionError:
         freqtheyb = 0
         freqtheyc = 0
-    else:
+    except:
         freqtheyc = float(numtheirc/len(their_history_list))
 
         freqtheyb = float(numtheirb/len(their_history_list))
