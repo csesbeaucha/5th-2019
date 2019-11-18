@@ -29,10 +29,10 @@ def move(my_history, their_history, my_score, their_score):
         elif their_history_list[l] == 'b':
             numtheirb = numtheirb + 1
     try: 
-        freqtheyc = float(numtheirc/len(their_history_list))
+        float(numtheirc/len(their_history_list))
 
-        freqtheyb = float(numtheirb/len(their_history_list))
-    except ZeroDivisionError as error:
+        float(numtheirb/len(their_history_list))
+    except ZeroDivisionError:
         freqtheyb = 0
         freqtheyc = 0
     else:
