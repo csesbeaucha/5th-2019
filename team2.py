@@ -29,9 +29,7 @@ def move(my_history, their_history, my_score, their_score):
     
 
     global flag
-
     global flag2
-
     
 
     if len(my_history) == 0:
@@ -58,7 +56,7 @@ def move(my_history, their_history, my_score, their_score):
 
         counter = 0
 
-        for i in len(range(their_history)):
+        for i in range(len(their_history)):
 
             if my_history[i] == their_history[i]:
 
@@ -88,7 +86,7 @@ def move(my_history, their_history, my_score, their_score):
 
         return 'b'
 
-    if len(my_history) >= 11:
+    if len(my_history) > 11:
 
         if flag == False:
 
