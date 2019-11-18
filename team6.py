@@ -28,10 +28,19 @@ def move(my_history, their_history, my_score, their_score):
             numtheirc = numtheirc + 1
         elif their_history_list[l] == 'b':
             numtheirb = numtheirb + 1
-    
-    freqtheyc = float(numtheirc/len(their_history_list))
+    try: 
+        freqtheyc = float(numtheirc/len(their_history_list))
 
-    freqtheyb = float(numtheirb/len(their_history_list))
+        freqtheyb = float(numtheirb/len(their_history_list))
+    except ZeroDivisionError as error:
+        freqtheyb = 0
+        freqtheyc = 0
+    else:
+        freqtheyc = float(numtheirc/len(their_history_list))
+
+        freqtheyb = float(numtheirb/len(their_history_list))
+
+
     stratnumber = random.randint(0,4)
     if stratnumber == 0:
         if their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
