@@ -32,9 +32,9 @@ def move(my_history, their_history, my_score, their_score):
     elif len(their_history)>0:
         for i in range (len(their_history)):
     
-            if their_history[i]=='c':
-                    return 'c'
-            elif random.randint(1,100)>99:
+            if their_history[i]=='b':
+                    return 'b'
+            elif random.randint(1,100)>95:
                 return 'c'
             else:
                 return 'b'
