@@ -22,7 +22,7 @@ def move(my_history, their_history, my_score, their_score):
         return 'c'
     if len(their_history) == 5:
         counter = 0
-        for i in range(5):
+        for i in range(len(their_history)):
             if my_history[i] == their_history[i]:
                 counter += 1
                 if counter == 5:
@@ -37,7 +37,7 @@ def move(my_history, their_history, my_score, their_score):
             return 'b'
     if flag == False:
         return 'b'
-    if len(my_history) >= 11:
+    if len(my_history) > 11:
         if flag == False:
             return 'b'
         elif flag == True:
