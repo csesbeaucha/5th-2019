@@ -41,45 +41,45 @@ def move(my_history, their_history, my_score, their_score):
         freqtheyb = float(numtheirb/len(their_history_list))
 
 
-    stratnumber = random.randint(0,4)
-    if stratnumber == 0:
-        try:
-            if their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
-                return 'b'
-            elif their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
-                return 'c'
-            elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] != 'b':
-                return 'b'
-            elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] == 'b':
-                return 'c'
-            elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
-                return 'b'
-            elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
-                return 'c'
-            elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] != 'b':
-                return 'c'
-            elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] == 'b':
-                return 'b'
-        except len(their_history_list)==0:
-            return 'b'
-        except:
-            if their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
-                return 'b'
-            elif their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
-                return 'c'
-            elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] != 'b':
-                return 'b'
-            elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] == 'b':
-                return 'c'
-            elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
-                return 'b'
-            elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
-                return 'c'
-            elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] != 'b':
-                return 'c'
-            elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] == 'b':
-                return 'b'
-    elif stratnumber == 1:
+    stratnumber = random.randint(0,3)
+    # if stratnumber == 0:
+    #     try:
+    #         if their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
+    #             return 'b'
+    #         elif their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
+    #             return 'c'
+    #         elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] != 'b':
+    #             return 'b'
+    #         elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] == 'b':
+    #             return 'c'
+    #         elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
+    #             return 'b'
+    #         elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
+    #             return 'c'
+    #         elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] != 'b':
+    #             return 'c'
+    #         elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] == 'b':
+    #             return 'b'
+    #     except len(their_history_list)==0:
+    #         return 'b'
+    #     except:
+    #         if their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
+    #             return 'b'
+    #         elif their_history_list[-1] == 'b' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
+    #             return 'c'
+    #         elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] != 'b':
+    #             return 'b'
+    #         elif their_history_list[-1] == 'b' & freqtheyb <0.5 & my_history_list[-1] == 'b':
+    #             return 'c'
+    #         elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] != 'b':
+    #             return 'b'
+    #         elif their_history_list[-1] == 'c' & freqtheyb >=0.5 & my_history_list[-1] == 'b':
+    #             return 'c'
+    #         elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] != 'b':
+    #             return 'c'
+    #         elif their_history_list[-1] == 'c' & freqtheyb <0.5 & my_history_list[-1] == 'b':
+    #             return 'b'
+    if stratnumber == 1:
         rand = random.randint(0,1)
         if rand == 0:
             return 'b'
@@ -95,7 +95,7 @@ def move(my_history, their_history, my_score, their_score):
             return 'c'
         elif their_history_list[-1] == 'c':
             return 'b'
-    elif stratnumber == 4:
+    elif stratnumber == 0:
         if my_score <= their_score:
             return 'b'
         elif my_score > their_score:
